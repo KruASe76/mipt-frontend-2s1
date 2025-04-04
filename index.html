@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>John Doe</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+<header>
+    <svg
+            class="header-svg"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="xMidYMid slice"
+    >
+        <defs>
+            <radialGradient
+                    id="Gradient1"
+                    cx="50%"
+                    cy="50%"
+                    fx="0.4%"
+                    fy="50%"
+                    r=".5"
+            >
+                <animate
+                        attributeName="fx"
+                        dur="34s"
+                        values="0%;3%;0%"
+                        repeatCount="indefinite"
+                />
+                <stop offset="0%" stop-color="rgba(255, 0, 255, 0.3)"/>
+                <stop offset="100%" stop-color="rgba(255, 0, 255, 0)"/>
+            </radialGradient>
+            <radialGradient
+                    id="Gradient2"
+                    cx="50%"
+                    cy="50%"
+                    fx="2.6%"
+                    fy="50%"
+                    r=".5"
+            >
+                <animate
+                        attributeName="fx"
+                        dur="23.5s"
+                        values="0%;3%;0%"
+                        repeatCount="indefinite"
+                />
+                <stop offset="0%" stop-color="rgba(255, 255, 0, 0.3)"/>
+                <stop offset="100%" stop-color="rgba(255, 255, 0, 0)"/>
+            </radialGradient>
+            <radialGradient
+                    id="Gradient3"
+                    cx="50%"
+                    cy="50%"
+                    fx="0.8%"
+                    fy="50%"
+                    r=".5"
+            >
+                <animate
+                        attributeName="fx"
+                        dur="21.5s"
+                        values="0%;3%;0%"
+                        repeatCount="indefinite"
+                />
+                <stop offset="0%" stop-color="rgba(0, 255, 255, 0.3)"/>
+                <stop offset="100%" stop-color="rgba(0, 255, 255, 0)"/>
+            </radialGradient>
+        </defs>
+
+        <rect
+                x="13.7%"
+                y="1.1%"
+                width="100%"
+                height="100%"
+                fill="url(#Gradient1)"
+                transform="rotate(334 50 50)"
+        >
+            <animate
+                    attributeName="x"
+                    dur="20s"
+                    values="25%;0%;25%"
+                    repeatCount="indefinite"
+            />
+            <animate
+                    attributeName="y"
+                    dur="21s"
+                    values="0%;25%;0%"
+                    repeatCount="indefinite"
+            />
+            <animateTransform
+                    attributeName="transform"
+                    type="rotate"
+                    from="0 50 50"
+                    to="360 50 50"
+                    dur="7s"
+                    repeatCount="indefinite"
+            />
+        </rect>
+        <rect
+                x="-2.1%"
+                y="35.4%"
+                width="100%"
+                height="100%"
+                fill="url(#Gradient2)"
+                transform="rotate(255 50 50)"
+        >
+            <animate
+                    attributeName="x"
+                    dur="23s"
+                    values="-25%;0%;-25%"
+                    repeatCount="indefinite"
+            />
+            <animate
+                    attributeName="y"
+                    dur="24s"
+                    values="0%;50%;0%"
+                    repeatCount="indefinite"
+            />
+            <animateTransform
+                    attributeName="transform"
+                    type="rotate"
+                    from="0 50 50"
+                    to="360 50 50"
+                    dur="12s"
+                    repeatCount="indefinite"
+            />
+        </rect>
+        <rect
+                x="9%"
+                y="14.5%"
+                width="100%"
+                height="100%"
+                fill="url(#Gradient3)"
+                transform="rotate(140 50 50)"
+        >
+            <animate
+                    attributeName="x"
+                    dur="25s"
+                    values="0%;25%;0%"
+                    repeatCount="indefinite"
+            />
+            <animate
+                    attributeName="y"
+                    dur="12s"
+                    values="0%;25%;0%"
+                    repeatCount="indefinite"
+            />
+            <animateTransform
+                    attributeName="transform"
+                    type="rotate"
+                    from="360 50 50"
+                    to="0 50 50"
+                    dur="9s"
+                    repeatCount="indefinite"
+            />
+        </rect>
+    </svg>
+
+    <div class="header-content">
+        <nav class="navbar">
+            <a href="#works" class="nav-link">Works</a>
+            <a href="#blog" class="nav-link">Blog</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="default-container">
+            <div class="hero">
+                <div class="profile-circle">
+                    <img src="./img/profile-image.png" alt="Profile Photo"/>
+                </div>
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Hi, I am John,
+                        <br/>
+                        Creative Technologist
+                    </h1>
+                    <p class="hero-description">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                        amet sint. Velit officia consequat duis enim velit mollit.
+                        Exercitation veniam consequat sunt nostrud amet.
+                    </p>
+                    <button class="fake-button">Download Resume</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="projects-section" id="blog">
+        <div class="default-container">
+            <div class="section-header">
+                <h2 class="section-title">Recent posts</h2>
+                <a href="#" class="view-all">View all</a>
+            </div>
+
+            <div class="project-grid">
+                <article class="card">
+                    <h3 class="project-title">Making a design system from scratch</h3>
+                    <div class="project-meta">
+                        <span class="project-year">2020</span>
+                        <span class="project-category">Design, Pattern</span>
+                    </div>
+                    <p class="project-description">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                        amet sint. Velit officia consequat duis enim velit mollit.
+                        Exercitation veniam consequat sunt nostrud amet.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3 class="project-title">Creating pixel perfect icons in Figma</h3>
+                    <div class="project-meta">
+                        <span class="project-year">2020</span>
+                        <span class="project-category">Figma, Icon Design</span>
+                    </div>
+                    <p class="project-description">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                        amet sint. Velit officia consequat duis enim velit mollit.
+                        Exercitation veniam consequat sunt nostrud amet.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="timeline-section" id="works">
+        <div class="default-container">
+            <h2 class="section-title">Featured works</h2>
+
+            <article class="timeline-item">
+                <img
+                        src="./img/dashboard.png"
+                        alt="Dashboard design"
+                        class="timeline-image"
+                />
+                <div class="timeline-content">
+                    <h3 class="timeline-title">Designing Dashboards</h3>
+                    <div class="project-meta">
+                        <span class="project-year">2020</span>
+                        <span class="project-category">Dashboard</span>
+                    </div>
+                    <p class="project-description">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                        amet sint. Velit officia consequat duis enim velit mollit.
+                        Exercitation veniam consequat sunt nostrud amet.
+                    </p>
+                </div>
+            </article>
+
+            <article class="timeline-item">
+                <img
+                        src="./img/portraits.png"
+                        alt="Vibrant portraits"
+                        class="timeline-image"
+                />
+                <div class="timeline-content">
+                    <h3 class="timeline-title">Vibrant Portraits of 2020</h3>
+                    <div class="project-meta">
+                        <span class="project-year">2018</span>
+                        <span class="project-category">Illustration</span>
+                    </div>
+                    <p class="project-description">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                        amet sint. Velit officia consequat duis enim velit mollit.
+                        Exercitation veniam consequat sunt nostrud amet.
+                    </p>
+                </div>
+            </article>
+
+            <article class="timeline-item">
+                <img
+                        src="./img/malayalam.png"
+                        alt="Malayalam type"
+                        class="timeline-image"
+                />
+                <div class="timeline-content">
+                    <h3 class="timeline-title">36 Days of Malayalam type</h3>
+                    <div class="project-meta">
+                        <span class="project-year">2018</span>
+                        <span class="project-category">Typography</span>
+                    </div>
+                    <p class="project-description">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                        amet sint. Velit officia consequat duis enim velit mollit.
+                        Exercitation veniam consequat sunt nostrud amet.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="default-container">
+            <form id="contact-form">
+                <h2 class="section-title submit-title">Contact me</h2>
+                <div class="form-group">
+                    <label for="name"></label>
+                    <input
+                            class="fadeIn"
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Фамилия и имя"
+                            required
+                    />
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone"></label>
+                    <input
+                            class="fadeIn"
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Номер телефона"
+                            required
+                    />
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email"></label>
+                    <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            class="fadeIn"
+                            placeholder="Email"
+                            required
+                    />
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="message"></label>
+                    <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Сообщение"
+                            class="fadeIn"
+                            required
+                    ></textarea>
+                    <span class="error-message"></span>
+                </div>
+
+                <button class="submit-text submit-button underline-hover" type="submit">
+                    Отправить
+                </button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="default-container">
+        <div class="social-links">
+            <a href="#" class="social-icon">
+                <img src="./img/facebook.png" alt="Facebook"/>
+            </a>
+            <a href="#" class="social-icon">
+                <img src="./img/instagram.png" alt="Instagram"/>
+            </a>
+            <a href="#" class="social-icon">
+                <img src="./img/twitter.png" alt="Twitter"/>
+            </a>
+            <a href="#" class="social-icon">
+                <img src="./img/linkedin.png" alt="LinkedIn"/>
+            </a>
+        </div>
+        <p class="copyright">© 2025 John Doe. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="./js/script.js"></script>
+</body>
+</html>
