@@ -22,8 +22,6 @@ function formatPhoneNumber(event, inputElement, prevValue) {
   let digitsOnly = inputElement.value.replace(/\D/g, "");
   let formattedValue = "";
 
-  if (event.inputType === "deleteContentBackward") return;
-
   if (digitsOnly.length > 0) {
     formattedValue = `+${digitsOnly.charAt(0)}`;
     digitsOnly = digitsOnly.substring(1);
