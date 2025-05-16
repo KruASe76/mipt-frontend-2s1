@@ -1,1 +1,1 @@
-# mipt-frontend-2s1
+# mipt-frontend-sem-2

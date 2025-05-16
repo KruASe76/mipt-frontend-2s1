@@ -7,7 +7,7 @@
 
     <title>John Doe</title>
 
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -159,18 +159,33 @@
             />
         </rect>
     </svg>
+    <svg
+            id="interactive-svg"
+            viewBox="0 0 120 120"
+            style="
+          position: fixed;
+          opacity: 50%;
+          top: 10px;
+          left: 10px;
+          z-index: 1000;
+          pointer-events: none;
+        "
+    >
+        <circle cx="30" cy="30" r="50" fill="rgba(0, 255, 255, 0.5)"/>
+    </svg>
 
     <div class="header-content">
-        <nav class="navbar">
-            <a href="#works" class="nav-link">Works</a>
+        <nav id="navbar" class="navbar">
+            <a href="#timer" class="nav-link">Timer</a>
             <a href="#blog" class="nav-link">Blog</a>
+            <a href="#works" class="nav-link">Works</a>
             <a href="#contact" class="nav-link">Contact</a>
         </nav>
 
-        <div class="default-container">
+        <div class="container">
             <div class="hero">
                 <div class="profile-circle">
-                    <img src="./img/profile-image.png" alt="Profile Photo"/>
+                    <img src="img/profile-image.png" alt="Profile Photo"/>
                 </div>
                 <div class="hero-content">
                     <h1 class="hero-title">
@@ -183,16 +198,39 @@
                         amet sint. Velit officia consequat duis enim velit mollit.
                         Exercitation veniam consequat sunt nostrud amet.
                     </p>
-                    <button class="fake-button">Download Resume</button>
+                    <button class="cta-button">Download Resume</button>
                 </div>
             </div>
         </div>
     </div>
 </header>
-
 <main>
-    <section class="projects-section" id="blog">
-        <div class="default-container">
+    <section class="section countdown-section" id="timer">
+        <div class="container">
+            <h2 class="section-title">Time until Young Con</h2>
+            <div class="countdown-container">
+                <div class="countdown-item">
+                    <span id="days">00</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="hours">00</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="minutes">00</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="seconds">00</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section projects-section" id="blog">
+        <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Recent posts</h2>
                 <a href="#" class="view-all">View all</a>
@@ -202,7 +240,7 @@
                 <article class="card">
                     <h3 class="project-title">Making a design system from scratch</h3>
                     <div class="project-meta">
-                        <span class="project-year">2020</span>
+                        <span class="project-year">2023</span>
                         <span class="project-category">Design, Pattern</span>
                     </div>
                     <p class="project-description">
@@ -213,9 +251,9 @@
                 </article>
 
                 <article class="card">
-                    <h3 class="project-title">Creating pixel perfect icons in Figma</h3>
+                    <h3 class="project-title">Creating pixel-perfect icons in Figma</h3>
                     <div class="project-meta">
-                        <span class="project-year">2020</span>
+                        <span class="project-year">2024</span>
                         <span class="project-category">Figma, Icon Design</span>
                     </div>
                     <p class="project-description">
@@ -228,20 +266,22 @@
         </div>
     </section>
 
-    <section class="timeline-section" id="works">
-        <div class="default-container">
+    <section class="section timeline-section" id="works">
+        <div class="container">
             <h2 class="section-title">Featured works</h2>
 
             <article class="timeline-item">
                 <img
-                        src="./img/dashboard.png"
+                        src="img/dashboard.png"
                         alt="Dashboard design"
-                        class="timeline-image"
+                        class="timeline-image gallery-image"
+                        data-gallery="works-gallery"
+                        data-index="0"
                 />
                 <div class="timeline-content">
                     <h3 class="timeline-title">Designing Dashboards</h3>
                     <div class="project-meta">
-                        <span class="project-year">2020</span>
+                        <span class="project-year">2022</span>
                         <span class="project-category">Dashboard</span>
                     </div>
                     <p class="project-description">
@@ -254,14 +294,16 @@
 
             <article class="timeline-item">
                 <img
-                        src="./img/portraits.png"
+                        src="img/portraits.png"
                         alt="Vibrant portraits"
-                        class="timeline-image"
+                        class="timeline-image gallery-image"
+                        data-gallery="works-gallery"
+                        data-index="1"
                 />
                 <div class="timeline-content">
-                    <h3 class="timeline-title">Vibrant Portraits of 2020</h3>
+                    <h3 class="timeline-title">Vibrant Portraits of 2023</h3>
                     <div class="project-meta">
-                        <span class="project-year">2018</span>
+                        <span class="project-year">2023</span>
                         <span class="project-category">Illustration</span>
                     </div>
                     <p class="project-description">
@@ -274,14 +316,16 @@
 
             <article class="timeline-item">
                 <img
-                        src="./img/malayalam.png"
+                        src="img/malayalam.png"
                         alt="Malayalam type"
-                        class="timeline-image"
+                        class="timeline-image gallery-image"
+                        data-gallery="works-gallery"
+                        data-index="2"
                 />
                 <div class="timeline-content">
                     <h3 class="timeline-title">36 Days of Malayalam type</h3>
                     <div class="project-meta">
-                        <span class="project-year">2018</span>
+                        <span class="project-year">2024</span>
                         <span class="project-category">Typography</span>
                     </div>
                     <p class="project-description">
@@ -293,18 +337,57 @@
             </article>
         </div>
     </section>
+    <section class="section contact-section" id="contact">
+        <div
+                class="container"
+                style="margin: auto; display: flex; justify-content: center"
+        >
+            <button class="feedback-popup-btn cta-button">Обратная связь</button>
+        </div>
+    </section>
+</main>
 
-    <section class="contact-section" id="contact">
-        <div class="default-container">
-            <form id="contact-form">
+<footer class="footer">
+    <div class="container">
+        <div class="social-links">
+            <a href="#" class="social-icon"
+            ><img src="img/facebook.png" alt="Facebook"
+            /></a>
+            <a href="#" class="social-icon"
+            ><img src="img/instagram.png" alt="Instagram"
+            /></a>
+            <a href="#" class="social-icon"
+            ><img src="img/twitter.png" alt="Twitter"
+            /></a>
+            <a href="#" class="social-icon"
+            ><img src="img/linkedin.png" alt="LinkedIn"
+            /></a>
+        </div>
+        <p class="copyright">© 2025 John Doe. All rights reserved.</p>
+    </div>
+</footer>
+
+<div class="delayed-popup" id="delayed-popup">
+    <div class="popup-content delay-content">
+        <span class="close-popup">&times;</span>
+        <h3>Важная информация!</h3>
+        <p>Вы находитесь на сайте уже целые 42 секунды</p>
+    </div>
+</div>
+
+<div class="feedback-popup" id="feedback-popup">
+    <div class="popup-content">
+        <div class="container">
+            <form id="contact-form" class="contact-form">
+                <span class="close-popup">&times;</span>
                 <h2 class="section-title submit-title">Contact me</h2>
                 <div class="form-group">
-                    <label for="name"></label>
                     <input
-                            class="fadeIn"
+                            class="fade-in"
                             type="text"
                             id="name"
                             name="name"
+                            aria-label="name"
                             placeholder="Фамилия и имя"
                             required
                     />
@@ -312,71 +395,69 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="phone"></label>
                     <input
+                            class="fade-in"
                             type="tel"
                             id="phone"
                             name="phone"
+                            aria-label="phone"
                             placeholder="Номер телефона"
-                            class="fadeIn"
                             required
                     />
                     <span class="error-message"></span>
                 </div>
 
                 <div class="form-group">
-                    <label for="email"></label>
                     <input
                             type="email"
                             id="email"
                             name="email"
+                            aria-label="email"
+                            class="fade-in"
                             placeholder="Email"
-                            class="fadeIn"
                             required
                     />
                     <span class="error-message"></span>
                 </div>
 
                 <div class="form-group">
-                    <label for="message"></label>
                     <textarea
                             id="message"
                             name="message"
+                            aria-label="message"
                             placeholder="Сообщение"
-                            class="fadeIn"
+                            class="fade-in"
                             required
                     ></textarea>
                     <span class="error-message"></span>
                 </div>
 
-                <button class="submit-text submit-button underline-hover" type="submit">
+                <button
+                        class="submit-text submit-button underline-hover"
+                        type="submit"
+                >
                     Отправить
                 </button>
             </form>
         </div>
-    </section>
-</main>
-
-<footer class="footer">
-    <div class="default-container">
-        <div class="social-links">
-            <a href="#" class="social-icon">
-                <img src="./img/facebook.png" alt="Facebook"/>
-            </a>
-            <a href="#" class="social-icon">
-                <img src="./img/instagram.png" alt="Instagram"/>
-            </a>
-            <a href="#" class="social-icon">
-                <img src="./img/twitter.png" alt="Twitter"/>
-            </a>
-            <a href="#" class="social-icon">
-                <img src="./img/linkedin.png" alt="LinkedIn"/>
-            </a>
-        </div>
-        <p class="copyright">© 2025 John Doe. All rights reserved.</p>
     </div>
-</footer>
+</div>
 
-<script src="./js/script.js"></script>
+<div class="gallery-popup" id="gallery-popup">
+    <div class="popup-content gallery-content">
+        <span class="close-popup">&times;</span>
+        <img id="popup-image" src="" alt="alt"/>
+        <div class="gallery-nav">
+            <button class="nav-arrow prev-arrow" aria-label="Previous">
+                <span class="chevron chevron-left"></span>
+            </button>
+            <button class="nav-arrow next-arrow" aria-label="Next">
+                <span class="chevron chevron-right"></span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
 </body>
 </html>
