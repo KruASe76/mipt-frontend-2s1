@@ -16,11 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!IS_MOBILE) {
     document.addEventListener("mousemove", (e) => followMouse(svg, e));
-    document.addEventListener("click", (e) => {
-      svg.style.transition = "all 0.3s ease";
-      followMouse(svg, e);
-      setTimeout(() => (svg.style.transition = ""), 300);
-    });
   } else {
     svg.style.position = "fixed";
     svg.style.transform = "translate(-50%, -50%) rotate(0deg)";
@@ -32,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.getElementById("navbar");
   const heroSection = document.querySelector(".hero");
   window.addEventListener("scroll", () => updateFixedNavbar(navbar, heroSection));
+  updateFixedNavbar(navbar, heroSection);
 
   const delayedPopup = document.getElementById("delayed-popup");
   if (!localStorage.getItem(POPUP_SHOWN_KEY)) {
