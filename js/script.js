@@ -282,7 +282,7 @@ async function handleFormSubmission(event) {
     });
 
     submitBtn.classList.replace("sending", "success");
-    submitBtn.innerHTML = "Successfully send!";
+    submitBtn.innerHTML = "Successfully sent!";
 
     setTimeout(() => {
       document
