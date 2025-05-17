@@ -255,7 +255,7 @@ async function handleFormSubmission(event) {
   }, {
     id: "phone", regex: /^\+\d \(\d{3}\) \d{3}-\d{4}$/, error: "Please enter a valid phone number",
   }, {
-    id: "email", regex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, error: "Please enter a valid email address",
+    id: "email", regex: /^[^\s@]+@[^\s@]+\.[^\s@\.]{2,}$/, error: "Please enter a valid email address",
   },];
 
   validations.forEach(({id, regex, error}) => {
