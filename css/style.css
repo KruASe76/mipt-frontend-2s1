@@ -154,6 +154,7 @@ header {
     gap: var(--space-l);
     padding: 0 var(--space-l);
     margin: var(--space-s) 0;
+    top: 0;
 }
 
 .nav-link {

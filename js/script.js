@@ -251,7 +251,7 @@ async function handleFormSubmission(event) {
   }, {
     id: "phone", regex: /^\+\d \(\d{3}\) \d{3}-\d{4}$/, error: "Please enter a valid phone number",
   }, {
-    id: "email", regex: /^[^\s@]+@[^\s@]+\.[^\s@\.]{2,}$/, error: "Please enter a valid email address",
+    id: "email", regex: /^[^\s@]+@[^\s@]+\.[^\s@.]{2,}$/, error: "Please enter a valid email address",
   },];
 
   validations.forEach(({id, regex, error}) => {
@@ -315,7 +315,19 @@ function followMouse(svg, e) {
 
 function updateFixedNavbar(navbar, heroSection) {
   const heroBottomHeight = heroSection.offsetTop + heroSection.offsetHeight;
-  window.scrollY > heroBottomHeight * 1.2 ? navbar.classList.add("fixed") : navbar.classList.remove("fixed");
+  const navbarHeight = (
+    navbar.offsetHeight
+    + parseInt(window.getComputedStyle(navbar).getPropertyValue("margin-top"))
+    + parseInt(window.getComputedStyle(navbar).getPropertyValue("margin-bottom"))
+  );
+
+  if (window.scrollY > heroBottomHeight * 0.5) {
+    navbar.classList.add("fixed");
+    heroSection.style.marginTop = `${navbarHeight}px`;
+  } else {
+    navbar.classList.remove("fixed");
+    heroSection.style.marginTop = "0";
+  }
 }
 
 function updateGalleryPopup(popupImage, currentGallery, currentImageIndex) {
